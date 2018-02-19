@@ -34,6 +34,33 @@ function getData() {
   
 }
 
+$('#nuevo-tema').click(function () {
+
+    var name = $('#nombre').val();
+    var mensaje = $('#mensaje').val();
+
+var body = {
+    'author_name': name,
+    'content': mensaje,
+};
+
+
+$.ajax({
+    url: 'http://examen-laboratoria-sprint-5.herokuapp.com/topics',
+    method: 'POST',
+    data: body,
+    success: function () {
+        
+
+    },
+    fail: function (request) {
+        if (request) {
+            alert(request.message);
+        }
+    }
+});
+
+})
 
 /*var request = new XMLHttpRequest();
 
