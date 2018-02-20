@@ -13,9 +13,19 @@ function getData() {
             console.log(response)
             
             $.each(response, function( index, obj ) {
-                $('.content').append(`<div class= " post col-6 col-sm-6 col-md-6"><p>Tema: ${response[index].content} <br> Por: ${response[index].author_name} <br> Respuestas: ${response[index]. responses_count}</p></div>`)
+                $('.content').append(`<div data-target=${response[index].id} class= "post col-6 col-sm-6 col-md-6"><p>Tema: ${response[index].content} <br> Por: ${response[index].author_name} <br> Respuestas: ${response[index]. responses_count}</p></div>`)
                 console.log(response[index].content);
+
+
               });
+
+                $('.post').click(function () {
+                    var id = ($(this).data("target"));
+
+                    localStorage.setItem("idUser", id);
+                    window.location.href = 'verTopic.html';
+               })
+              
 
               $("#myInput").on("keyup", function() {
                 var value = $(this).val().toLowerCase();
