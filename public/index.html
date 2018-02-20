@@ -3,26 +3,70 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Foro-Cool</title>
   </head>
   <body>
-
-    <h1>Aqui van todos los temas</h1>
-    <input type="text" name="" id="myInput" placeholder="busca un tema">
-    <div>
-      <input type="text" id="nombre">
-      <input type="text" id="mensaje">
+    <header>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4 d-flex justify-content-center">FORO COOL</h1>
+        <h4 class="lead d-flex justify-content-center">El foro que te permite buscar entre muchos temas de tu interes.</h4>
+      </div>
     </div>
+  </header>
 
-    <input type="button" value="Agregar tema" id="nuevo-tema">
-    <div class="content"></div>
+  <section class="ml-5">
+
     
+        
+    <input type="text" name="" id="myInput" placeholder="Busca un tema" class="form-control w-25">
+     
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Nuevo tema</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Autor:</label>
+                  <input type="text" class="form-control" id="nombre">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="col-form-label">Mensaje:</label>
+                  <textarea class="form-control" id="mensaje"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary" id="nuevo-tema">Agregar nuevo tema</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <input type="button" value="Agregar tema" class="btn btn-info btn-lg mb-3" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">
+    <div class="content"></div>
+  </section>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/functions.js"></script>
     <script src="js/main.js"></script>
     
   </body>
 </html>
+

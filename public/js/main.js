@@ -13,7 +13,7 @@ function getData() {
             console.log(response)
             
             $.each(response, function( index, obj ) {
-                $('.content').append(`<p>Tema: ${response[index].content} <br> Por:${response[index].author_name} <br> Respuestas: ${response[index]. responses_count}</p>`)
+                $('.content').append(`<div class= " post col-6 col-sm-6 col-md-6"><p>Tema: ${response[index].content} <br> Por: ${response[index].author_name} <br> Respuestas: ${response[index]. responses_count}</p></div>`)
                 console.log(response[index].content);
               });
 
@@ -43,6 +43,9 @@ var body = {
     'author_name': name,
     'content': mensaje,
 };
+
+
+
 
 
 $.ajax({

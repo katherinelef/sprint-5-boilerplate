@@ -1,0 +1,15 @@
+#myInput {
+    position: absolute;
+    right: 50px;
+}
+
+.post {
+    border: 1px solid rgb(233, 227, 227);
+    padding: 10px;
+    font-family: Courier New, Courier, monospace;
+    box-shadow: 5px 5px 5px 0px rgba(85, 83, 83, 0.75);
+}
+
+h4 {
+    font-family: Courier New, Courier, monospace;
+}
